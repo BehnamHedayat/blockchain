@@ -1,0 +1,23 @@
+// SPDX-License-Identifier: BSD-2-Clause
+pragma solidity 0.8.18;
+
+contract Century {
+    // this function is taking a year and is giving a century
+    function geuss(int year) public pure returns (int) {
+        
+        int x;
+        int y;
+        int result;
+        x = year % 100;
+        y = year / 100;
+
+        if (x == 0) {
+            result = y;
+        } else {
+            result = y + 1;
+        }
+
+        return result;
+        
+    }
+}
